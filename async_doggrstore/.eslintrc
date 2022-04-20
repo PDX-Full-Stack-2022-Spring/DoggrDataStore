@@ -1,0 +1,79 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "jest",
+    "import"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    // This is so that we can use promisify on Node's http methods
+    "default-param-last": "off",
+    // Easier grading rules
+    "newline-per-chained-call": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 80
+      }
+    ],
+    "indent": [
+      "warn",
+      2
+    ],
+    "no-mixed-spaces-and-tabs": "error",
+    "semi": "error",
+    "quotes": "off",
+    "arrow-parens": "error",
+    "spaced-comment": "off",
+    "@typescript-eslint/quotes": "off",
+    "no-trailing-spaces": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "space-in-parens": "off",
+    "prefer-destructuring": "off",
+    "object-curly-spacing": "off",
+    "no-multiple-empty-lines": "off",
+    "no-plusplus": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "prefer-const": "off",
+    "no-unused-expressions": "off",
+    "array-callback-return": "off",
+    "padded-blocks": "off",
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "function-paren-newline": "off",
+    "no-multi-spaces": "off",
+    "eol-last": "off",
+    "no-underscore-dangle": "off",
+    // These flip based on dev convenience vs prod safety
+    // Comment out everything below before building prod
+    "no-console": "off",
+    "consistent-return": "off",
+    //"no-unused-vars": "off",
+    "@typescript-eslint/unused-import": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-default-export": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-implicit-any": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}
